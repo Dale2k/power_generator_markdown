@@ -28,7 +28,7 @@ const questions = [
   {
     type: "input",
     message:
-      "Choose a License for your Project From the following list: MIT, BSL, Apache or none: ",
+      "Choose a License for your Project From the following list: MIT, ISC, Apache or none: ",
     name: "license",
   },
   {
