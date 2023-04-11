@@ -45,8 +45,41 @@ Learn more about the license from the following link: ${renderLicenseLink(
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  //table of contents
+  let toc = [
+    "Description",
+    "Installation",
+    "Usage",
+    "License",
+    "Contribution",
+    "Test",
+    "Questions",
+  ];
+  let res = "";
+  for (let i = 0; i < toc.length; i++) {
+    res += `- [${table[i]}](#${table[i]})\n`;
+  }
 
+  return `# ${data.title}\n
+${badgeShow}
+## ${table[0]}\n
+${data.description}\n
+## Table of Contents\n
+${res}\n
+## ${table[1]}\n
+${data.installation}\n
+## ${table[2]}\n
+${data.usage}\n
+${renderLicenseSection(data.license)}
+## ${table[4]}\n
+${data.contributing}\n
+## ${table[5]}\n
+${data.test}\n
+## ${table[6]}\n
+GitHub: ${data.username}. [Click here](https://github.com/${
+    data.username
+  }) to go to my github profile\n
+For additional questions reach me at ${data.email}\n
 `;
 }
 
