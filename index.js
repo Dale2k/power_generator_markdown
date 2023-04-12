@@ -26,10 +26,9 @@ const questions = [
     name: "usage",
   },
   {
-    type: "input",
-    message:
-      "Choose a License for your Project From the following list: MIT, ISC, Apache or none: ",
+    type: "checkbox",
     name: "license",
+    choices: ["MIT", "ISC", "Apache License 2.0"],
   },
   {
     type: "input",
@@ -43,12 +42,12 @@ const questions = [
   },
   {
     type: "input",
-    message: "Enter your GitHub Username.",
+    message: "provide your GitHub Username.",
     name: "username",
   },
   {
     type: "input",
-    message: "Enter your Email",
+    message: "provide your Email",
     name: "email",
   },
 ];

@@ -1,12 +1,8 @@
-# p1
-
+# 1
 
 ## Description
-
-p2
-
-## toc of Contents
-
+2
+## Table of Contents
 - [Description](#Description)
 - [Installation](#Installation)
 - [Usage](#Usage)
@@ -15,29 +11,20 @@ p2
 - [Test](#Test)
 - [Questions](#Questions)
 
-
 ## Installation
-
-p3
-
+3
 ## Usage
-
-p4
-
+4
 ## License
-The Application is covered under mit  license
-Learn more about the license from the following link: 
+The Application is covered under MIT  license. Learn more about the license from the following link: 
+        https://choosealicense.com/licenses/mit/
+        
 ## Contribution
-
-p5
-
+5
 ## Test
-
-p6
-
+6
 ## Questions
+GitHub: 7. [Click here](https://github.com/7) to go to my github profile
 
-GitHub: p7. [Click here](https://github.com/p7) to go to my github profile
-
-For additional questions reach me at p8
+For additional questions reach me at vervgf
 
