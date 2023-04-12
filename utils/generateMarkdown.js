@@ -7,11 +7,11 @@ function renderLicenseBadge(license) {
     return "";
   } else if (license) {
     if (license == "MIT") {
-      return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
-    } else if (license == "BSL 1.0") {
-      return `[![License](https://img.shields.io/badge/License-BSL-yellow.svg)](https://opensource.org/license/bsl1-0-html/)`;
-    } else if (license == "Apache License 2.0") {
-      return `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+      return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://`;
+    } else if (license == "BSL") {
+      return `[![License: BSL](https://img.shields.io/badge/License-BSL-yellow.svg)`;
+    } else if (license == "Apache") {
+      return `[![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`;
     }
   }
   return badge;
@@ -21,26 +21,18 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   let link;
-  if (!license) {
-    return "";
-  } else if (license) {
-    for (i = 0; i < 1; i++) {
-      if (license == "MIT") {
-        return `
-        https://choosealicense.com/licenses/mit/
-        `;
-      } else if (license == "BSL 1.0") {
-        return `
-        https://choosealicense.com/licenses/bsl-1.0/
-        `;
-      } else if (license == "Apache License 2.0") {
-        return `
-        https://choosealicense.com/licenses/apache-2.0/
-        `;
-      }
-    }
+  if (license == "MIT") {
+    link =
+      "[https://choosealicense.com/licenses/mit](https://choosealicense.com/licenses/mit)";
+  } else if (license == "Apache") {
+    link =
+      "[https://choosealicense.com/licenses/apache-2.0/](https://choosealicense.com/licenses/apache-2.0/)";
+  } else if (license === "BSL") {
+    link =
+      "[https://choosealicense.com/licenses/](https://choosealicense.com/licenses/)";
+  } else {
+    link = "";
   }
-
   return link;
 }
 
@@ -74,13 +66,6 @@ function generateMarkdown(data) {
     res += `- [${toc[i]}](#${toc[i]})\n`;
   }
 
-  let badger;
-  if (renderLicenseSection(data.license) === "") {
-    badger = "";
-  } else {
-    badger = `${renderLicenseBadge(data.license)}\n`;
-  }
-
   return `# ${data.title}
 
 ## ${toc[0]}
@@ -92,6 +77,8 @@ ${data.installation}
 ## ${toc[2]}
 ${data.usage}
 ${renderLicenseSection(data.license)}
+## ${toc[3]}
+${renderLicenseBadge(data.license)}
 ## ${toc[4]}
 ${data.contributing}
 ## ${toc[5]}

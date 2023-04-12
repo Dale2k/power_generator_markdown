@@ -28,7 +28,7 @@ const questions = [
   {
     type: "checkbox",
     name: "license",
-    choices: ["MIT", "ISC", "Apache License 2.0"],
+    choices: ["MIT", "BSL", "Apache"],
   },
   {
     type: "input",
