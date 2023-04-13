@@ -26,9 +26,9 @@ const questions = [
     name: "usage",
   },
   {
-    type: "checkbox",
+    type: "input",
+    message: "Choose a license MIT, BSL, or Apache",
     name: "license",
-    choices: ["MIT", "BSL", "Apache"],
   },
   {
     type: "input",

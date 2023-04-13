@@ -6,12 +6,12 @@ function renderLicenseBadge(license) {
   if (!license) {
     return "";
   } else if (license) {
-    if (license == "MIT") {
-      return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://`;
-    } else if (license == "BSL") {
-      return `[![License: BSL](https://img.shields.io/badge/License-BSL-yellow.svg)`;
-    } else if (license == "Apache") {
-      return `[![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`;
+    if (license == "MIT" || license == "mit") {
+      return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]`;
+    } else if (license == "BSL" || license == "bsl") {
+      return `[![License: BSL](https://img.shields.io/badge/License-BSL-yellow.svg)]`;
+    } else if (license == "Apache" || license == "apache") {
+      return `[![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]`;
     }
   }
   return badge;
@@ -21,15 +21,15 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   let link;
-  if (license == "MIT") {
+  if (license == "MIT" || license == "mit") {
     link =
       "[https://choosealicense.com/licenses/mit](https://choosealicense.com/licenses/mit)";
-  } else if (license == "Apache") {
+  } else if (license == "Apache" || license == "apache") {
     link =
       "[https://choosealicense.com/licenses/apache-2.0/](https://choosealicense.com/licenses/apache-2.0/)";
-  } else if (license === "BSL") {
+  } else if (license === "BSL" || license == "bsl") {
     link =
-      "[https://choosealicense.com/licenses/](https://choosealicense.com/licenses/)";
+      "[https://choosealicense.com/licenses/](https://choosealicense.com/licenses/bsl/)";
   } else {
     link = "";
   }
@@ -68,26 +68,26 @@ function generateMarkdown(data) {
 
   return `# ${data.title}
 
-## ${toc[0]}
+## Description
 ${data.description}
 ## Table of Contents
 ${res}
-## ${toc[1]}
+## Installation
 ${data.installation}
-## ${toc[2]}
+## Usage
 ${data.usage}
 ${renderLicenseSection(data.license)}
 ## ${toc[3]}
 ${renderLicenseBadge(data.license)}
-## ${toc[4]}
+## Contribution
 ${data.contributing}
-## ${toc[5]}
+## Test
 ${data.test}
-## ${toc[6]}
+## Questions
 GitHub: ${data.username}. [Click here](https://github.com/${
     data.username
   }) to go to my github profile\n
-For additional questions reach me at ${data.email}\n
+For additional questions reach me at ${data.email}
 `;
 }
 

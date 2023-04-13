@@ -1,91 +1,63 @@
-# 03 JavaScript: Password Generator
+# 09 Node.js Challenge: Professional README Generator
 
 ## URL and Github Deployed
 
 Depository Name:
 
-ds_password_generator
+power_generator_markdown
 
 URL:
 
-https://github.com/Dale2k/ds_password_generator
+https://github.com/Dale2k/power_generator_markdown
 
-deployed address:
+## Description
 
-https://dale2k.github.io/ds_password_generator/
+When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions. this last part increases the likelihood that other developers will contribute to the success of the project. 
+
+You can quickly and easily create a README file by using a command-line application to generate one. This allows the project creator to devote more time to working on the project.
+
+## Installation
+
+The application will be invoked by using the following command:
+
+node index.js
+
+See sammpleReadme.md file in github repository
+
 
 ## User Story
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
 
-## Acceptance Criteria
+AS A developer
+I WANT a README generator
+SO THAT I can quickly create a professional README for a new project
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+
+## Criteria
+
+GIVEN a command-line application that accepts user input
+WHEN I am prompted for information about my application repository
+THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+WHEN I enter my project title
+THEN this is displayed as the title of the README
+WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
+THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+WHEN I choose a license for my application from a list of options
+THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+WHEN I enter my GitHub username
+THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
+WHEN I enter my email address
+THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
 
 ## Mock-Up
 
-The following image shows the web application's appearance and functionality:
-
-![The Password Generator application displays a red button to "Generate Password".](./assets/Images/javascript-homework-demo.png)
+The following image shows the application's appearance and functionality:
 
 
 
-
-![Password length 20 characters selected](./assets/Images/Password_Length_20_Selection.png)
-
+[Demonstration of application Functionality](https://drive.google.com/file/d/1IIol-CODVtoNbv3P_NWu5QsMsjD5-8dF/view)
 
 
-
-![Lower Case letter chioice](./assets/Images/Lower_Case_Choice.png)
-
-
-
-
-![Upper Case letter chioice](./assets/Images/Upper_Case_Choice.png)
-
-
-
-
-
-![Special Characters chioice](./assets/Images/Special_Char_Choice.png)
-
-
-
-
-![20 Character Password Generated](./assets/Images/20_Character_Password_Generated.png)
-
-### Errors
-
-
-![Invalid Password length chosen](./assets/Images/Invalid_Length_Message.png)
-
-
-![Invalid Password length chosen](./assets/Images/Invalid_Length_Output.png)
-
-
-No valid length or any characters chosen.
-
-![No valid choices input](./assets/Images/Message_No_Valid_Choices_Input.png)
 
 
 
