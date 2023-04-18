@@ -52,32 +52,37 @@ The Application is covered under ${license}  license. Learn more about the licen
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   //table of contents
-  let toc = [
-    "Description",
-    "Installation",
-    "Usage",
-    "License",
-    "Contribution",
-    "Test",
-    "Questions",
-  ];
-  let res = "";
-  for (let i = 0; i < toc.length; i++) {
-    res += `- [${toc[i]}](#${toc[i]})\n`;
-  }
+  // let toc = [
+  //   "Description",
+  //   "Installation",
+  //   "Usage",
+  //   "License",
+  //   "Contribution",
+  //   "Test",
+  //   "Questions",
+  // ];
+  // // let res = "";
+  // // for (let i = 0; i < toc.length; i++) {
+  // //   res += `[${toc[i]}](#${toc[i]})\n`;
+  // // }
 
   return `# ${data.title}
-
 ## Description
 ${data.description}
 ## Table of Contents
-${res}
+[Description](#description)\n
+[Installation](#installation)\n
+[Usage](#usage)\n
+[License](#license)\n
+[Contribution](#contribution)\n
+[Test](#test)\n
+[Questions](#questions)\n
 ## Installation
 ${data.installation}
 ## Usage
 ${data.usage}
 ${renderLicenseSection(data.license)}
-## ${toc[3]}
+## License
 ${renderLicenseBadge(data.license)}
 ## Contribution
 ${data.contributing}
@@ -86,8 +91,9 @@ ${data.test}
 ## Questions
 GitHub: ${data.username}. [Click here](https://github.com/${
     data.username
-  }) to go to my github profile\n
-For additional questions reach me at ${data.email}
+  }) to go to my github profile
+
+For additional questions reach me at ${data.email}:
 `;
 }
 
